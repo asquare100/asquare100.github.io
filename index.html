@@ -46,7 +46,7 @@ pagination:
 <nav class="pagination" role="navigation">
 	<p>
     {% if paginator.previous_page %}
-			{% if paginator.page == 2 %}
+			{% if paginator.page >= 2 %}
 			<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">
         <span class="fa-stack fa-lg">
           <i class="fa fa-square fa-stack-2x"></i>

@@ -9,12 +9,12 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Centrarium
-subtitle: "A simple yet classy theme for your Jekyll website or blog"
-email: blcentra@gmail.com
-name: Ben Centra
+title: ANKUR ABHINAV
+subtitle: "Software Engineer, Mercari Inc., Tokyo"
+email: abhinav.ankur100@gmail.com
+name: Ankur Abhinav
 description: >
-  A simple yet classy theme for your Jekyll website or blog.
+  My personal website
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -60,6 +60,9 @@ descriptions:
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
 
+  - cat: tech
+    desc: "Articles related to technology"
+
 # Social icons and sharing options
 #
 # Social settings are used in two places:
@@ -78,8 +81,8 @@ descriptions:
 social:
   - name: Twitter
     icon: twitter
-    username: TheBenCentra
-    url: https://twitter.com/TheBenCentra
+    username: ankurabhinav100
+    url: https://twitter.com/ankurabhinav100
     desc: Follow me on Twitter
     share: true
 
@@ -92,15 +95,15 @@ social:
 
   - name: GitHub
     icon: github
-    username: bencentra
-    url: https://github.com/bencentra
-    desc: Fork me on GitHub
+    username: asquare100
+    url: https://github.com/asquare100
+    desc: Find me on GitHub
     share: false
 
   - name: LinkedIn
     icon: linkedin
-    username: Ben Centra
-    url: https://www.linkedin.com/pub/ben-centra/47/769/60a
+    username: Ankur Abhinav
+    url: https://www.linkedin.com/in/ankur-abhinav-15b4b6131/
     desc: Connect with me on LinkedIn
     share: true
 

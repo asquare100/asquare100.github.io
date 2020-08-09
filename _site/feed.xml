@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Aug 2020 20:45:02 +0530</pubDate>
-    <lastBuildDate>Sat, 08 Aug 2020 20:45:02 +0530</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2020 13:07:44 +0530</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2020 13:07:44 +0530</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -23,7 +23,7 @@
         <category>ipsum</category>
         
         
-        <category>Tech</category>
+        <category>tech</category>
         
       </item>
     
@@ -39,7 +39,7 @@
         <category>welcome</category>
         
         
-        <category>Jekyll</category>
+        <category>jekyll</category>
         
       </item>
     
@@ -55,7 +55,7 @@
         <category>ipsum</category>
         
         
-        <category>Dummy</category>
+        <category>dummy</category>
         
       </item>
     
@@ -71,7 +71,7 @@
         <category>welcome</category>
         
         
-        <category>Jekyll</category>
+        <category>jekyll</category>
         
       </item>
     
@@ -87,7 +87,7 @@
         <category>ipsum</category>
         
         
-        <category>Dummy</category>
+        <category>dummy</category>
         
       </item>
     
@@ -101,7 +101,7 @@
         <category>lorem</category>
         
         
-        <category>Dummy</category>
+        <category>dummy</category>
         
       </item>
     
@@ -115,7 +115,7 @@
         <category>ipsum</category>
         
         
-        <category>Dummy</category>
+        <category>dummy</category>
         
       </item>
     
@@ -127,7 +127,7 @@
         <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/19/dummy3.html</guid>
         
         
-        <category>Dummy</category>
+        <category>dummy</category>
         
       </item>
     
@@ -139,7 +139,7 @@
         <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/19/dummy2.html</guid>
         
         
-        <category>Dummy</category>
+        <category>dummy</category>
         
       </item>
     
@@ -151,7 +151,7 @@
         <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/19/dummy.html</guid>
         
         
-        <category>Dummy</category>
+        <category>dummy</category>
         
       </item>
     

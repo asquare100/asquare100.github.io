@@ -3,7 +3,7 @@ layout: post
 title:  "First Tech article"
 date:   2020-08-08
 author: Ankur Abhinav
-categories: Tech
+categories: tech
 tags: lorem ipsum
 ---
 

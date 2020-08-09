@@ -14,7 +14,8 @@ subtitle: "Software Engineer, Mercari Inc., Tokyo"
 email: abhinav.ankur100@gmail.com
 name: Ankur Abhinav
 description: >
-  I am Ankur Abhinav. I am a Software Engineer.
+  I am Ankur Abhinav. 
+  The blogs on this website express my personal opinions on different topics.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -50,7 +51,7 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 # Disqus comments
-# disqus_shortname: bencentra
+disqus_shortname: asquare100-github-io
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
@@ -115,7 +116,7 @@ social:
     username: ""
     url: ""
     desc: Add me to your Circles
-    share: true
+    share: false
 
   - name: YouTube
     icon: youtube
@@ -136,7 +137,7 @@ social:
     username: ""
     url: ""
     desc: Follow me on Pinterest
-    share: true
+    share: false
 
   - name: SoundCloud
     icon: soundcloud

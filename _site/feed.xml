@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ANKUR ABHINAV</title>
-    <description>I am Ankur Abhinav. I am a Software Engineer.
+    <description>I am Ankur Abhinav.  The blogs on this website express my personal opinions on different topics.
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Aug 2020 13:23:20 +0530</pubDate>
-    <lastBuildDate>Sun, 09 Aug 2020 13:23:20 +0530</lastBuildDate>
+    <pubDate>Sun, 09 Aug 2020 21:03:40 +0530</pubDate>
+    <lastBuildDate>Sun, 09 Aug 2020 21:03:40 +0530</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>

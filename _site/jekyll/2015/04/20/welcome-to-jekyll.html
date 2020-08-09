@@ -72,6 +72,7 @@
 	<script type="text/javascript">
 		window.tooltips = []
 	</script>
+
 </head>
 
 
@@ -261,9 +262,11 @@ window.tooltips.push(['#someOtherId', { content: "Put your tooltip content here.
 
 
 
+
 <section class="rss">
-  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+  <p class="rss-subscribe text"><strong><!--Subscribe--> <a href="/feed.xml"><!--via RSS--></a></strong></p>
 </section>
+
 
 <section class="share">
   <span>Share: </span>
@@ -323,11 +326,6 @@ window.tooltips.push(['#someOtherId', { content: "Put your tooltip content here.
     
     
     
-      <a href="//plus.google.com/share?title=Welcome+to+Jekyll%21&url=%2Fjekyll%2F2015%2F04%2F20%2Fwelcome-to-jekyll.html"
-        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
-        <i class="fa fa-google-plus-square fa-lg"></i>
-      </a>
-    
     
     
     
@@ -356,11 +354,6 @@ window.tooltips.push(['#someOtherId', { content: "Put your tooltip content here.
     
     
     
-    
-      <a href="//www.pinterest.com/pin/create/button/?description=Welcome+to+Jekyll%21&url=%2Fjekyll%2F2015%2F04%2F20%2Fwelcome-to-jekyll.html&media=/assets/instacode.png"
-        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
-        <i class="fa fa-pinterest-square fa-lg"></i>
-      </a>
     
     
     
@@ -443,6 +436,24 @@ window.tooltips.push(['#someOtherId', { content: "Put your tooltip content here.
   
 </section>
 
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'asquare100-github-io';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 
 
 
@@ -575,7 +586,8 @@ window.tooltips.push(['#someOtherId', { content: "Put your tooltip content here.
 
     <div class="site-signature">
       <!-- <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p> -->
-      <p class="text">I am Ankur Abhinav. I am a Software Engineer.
+      <p><strong>Description</strong></p>
+      <p class="text">I am Ankur Abhinav.  The blogs on this website express my personal opinions on different topics.
 </p>
     </div>
   
@@ -588,8 +600,10 @@ window.tooltips.push(['#someOtherId', { content: "Put your tooltip content here.
 <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<!--
 <script src="//unpkg.com/popper.js@1"></script>
 <script src="//unpkg.com/tippy.js@5"></script>
+-->
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -609,13 +623,13 @@ $(document).ready(function() {
   });
 
 	// Enable tooltips via Tippy.js
-	if (Array.isArray(window.tooltips)) {
+	/*if (Array.isArray(window.tooltips)) {
 		window.tooltips.forEach(function(tooltip) {
 			var selector = tooltip[0];
 			var config = tooltip[1];
 			tippy(selector, config);
 		})
-	}
+	}*/
 });
 
 </script>

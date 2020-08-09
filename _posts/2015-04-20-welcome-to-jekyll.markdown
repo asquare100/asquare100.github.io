@@ -29,8 +29,8 @@ You can use [highlight.js][highlight] to add syntax highlight code snippets:
 Use the [Liquid][liquid] `{% raw %}{% highlight <language> %}{% endraw %}` tag to add syntax highlighting to code snippets.
 
 For instance, this template...
-{% highlight html %}
-{% raw %}{% highlight javascript %}    
+{% highlight html %}{% raw %}
+{% highlight javascript %}    
 function demo(string, times) {    
   for (var i = 0; i < times; i++) {    
     console.log(string);    

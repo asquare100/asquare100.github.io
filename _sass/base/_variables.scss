@@ -7,6 +7,7 @@ $heading-font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", "Arial", san
 
 // Font Sizes
 $base-font-size: $em-base; // 16px
+//$base-font-size: 20px;
 
 // Adjust modular scale ratio
 $modular-scale-ratio: $minor-third;
@@ -41,7 +42,8 @@ $bc-red: #bc0000;
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
 $action-color: $blue;
-$highlight-color: tint($action-color, 33%);
+//$highlight-color: tint($action-color, 33%);
+$highlight-color: tint($action-color, 10%);
 
 // Border
 $base-border-color: $light-gray;

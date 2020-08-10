@@ -21,8 +21,8 @@ description: >
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ankurabhinav.com" # the base hostname & protocol for your site
-cover: "/assets/header_image2.jpg"
-logo: "/assets/logo.png"
+cover: "/assets/header_image3.jpg"
+logo: "/assets/ankur_logo6.png"
 
 # Build settings
 markdown: kramdown

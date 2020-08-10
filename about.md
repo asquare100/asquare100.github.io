@@ -1,18 +1,19 @@
 ---
 layout: page
-title: About
+title: "About Me"
 permalink: /about/
 main_nav: true
 ---
 
 ![alt text]({{ site.baseurl }}/assets/profile-photo.jpg "Profile Picture"){:.profile}
 
-Centrarium is a custom theme for Jekyll, made by [Ben Centra][bencentra] for his own blog. He'd be humbled if you liked it enough to use it as well! Installation and configuration instructions can be found in the [GitHub repository](https://github.com/bencentra/centrarium).
+Hello! I am Ankur Abhinav. I work as a software engineer in Machine Learning team of Mercari, Inc., Tokyo.
 
-This page is a good place to write about yourself, your project, your product, or whatever it is your site is for. You can replace the image above, or you can get rid of it entirely. 
+I graduated from [IIT Kharagpur][iitkgp] in 2019. I studied [Computer Science and Engineering][cse] at college. Also, I took part in a few co-curricular activities there.
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/). And you can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+My basic interests are Software Engineering and Machine Learning. Apart from that, I am also interested in Finance, Trading, Investments and Economics.
 
-[centrarium]: https://github.com/bencentra/centrarium
-[bencentra]: http://bencentra.com
-[jekyll]: https://github.com/jekyll/jekyll
+My hobbies include book reading, weight training and watching movies. I have recently started blogging as a hobby.
+
+[iitkgp]: http://www.iitkgp.ac.in/
+[cse]: http://cse.iitkgp.ac.in/

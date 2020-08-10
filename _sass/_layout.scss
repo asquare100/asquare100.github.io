@@ -188,6 +188,8 @@ pre code.hljs {
     text-align: right;
     width: 100%;
     padding: 0.25em 0;
+    // Size of page links in header
+    font-size: 1.3em;
     @include media ($tablet) {
       background: transparent;
       display: inline;
@@ -289,6 +291,8 @@ pre code.hljs {
 			padding-bottom: 1em;
 		}
 		.post-content {
+			// Size of basic text in posts
+			font-size: 1.5em;
 			padding: 1em 0;
 		}
 		.tags {

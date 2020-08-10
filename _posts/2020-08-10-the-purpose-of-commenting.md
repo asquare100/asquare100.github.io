@@ -8,7 +8,7 @@ tags: coding
 cover:  "/assets/blog-covers/comments.png"
 ---
 
-One of the most crucial and also the most ignored part of every code is `Commenting`. The coder while writing a code is usually too much involed into the logic of the code and its implementation that he rarely thinks about the person who is ever going to read the code later. The prime objective of the coder is to get the desired output from the code. However, writing a clean, readble and easily understandable code is very important while working in a coding team.
+One of the most crucial and also the most ignored part of every code is `Commenting`. The coder while writing a code is usually too much involed into the logic of the code and its implementation that he rarely thinks about the person who is ever going to read the code later. The prime objective of the coder is to get the desired output from the code. However, writing a clean, readable and easily understandable code is very important while working in a coding team.
 
 ## What are comments
 > In computer programming, a comment is a programmer-readable explanation or annotation in the source code of a computer program. They are added with the purpose of making the source code easier for humans to understand, and are generally ignored by compilers and interpreters.   

@@ -8,7 +8,7 @@ tags:	investing basics
 cover:  "/assets/blog-covers/invest-money.jpg"
 ---
 
-A person learns differnt skills during his/her lifetime to make his/her life continuously better. Every person tries to learn skills which are relevant in his or her profession. A software engineer will be more inclined to develop skills related to programming languages, artificial intelligence, etc. A salesman will develop the skill of convincing people and so on.  However, there are some common skills such as good verbal skill which can benefit persons belonging to every profession. One such skill is investing your money properly. In this blog, I will talk about the skill of investing and why it is important to learn investing from the financial aspect.  
+A person learns different skills during his/her lifetime to make his/her life continuously better. Every person tries to learn skills which are relevant in his or her profession. A software engineer will be more inclined to develop skills related to programming languages, artificial intelligence, etc. A salesman will develop the skill of convincing people and so on.  However, there are some common skills such as good verbal skill which can benefit persons belonging to every profession. One such skill is investing your money properly. In this blog, I will talk about the skill of investing and why it is important to learn investing from the financial aspect.  
 
 ## Is there anything to learn for investing money
 

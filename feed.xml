@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ANKUR ABHINAV</title>
+    <description>I am Ankur Abhinav.  The blogs on this website express my personal opinions on different topics.
+</description>
+    <link>http://ankurabhinav.com/</link>
+    <atom:link href="http://ankurabhinav.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 19 Sep 2020 18:40:34 +0530</pubDate>
+    <lastBuildDate>Sat, 19 Sep 2020 18:40:34 +0530</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Test Driven Development</title>
+        <description>&lt;p&gt;Have you ever felt frustrated and exhausted while writing your code? Does it happen to you that you spend a lot of time debugging your code and suddenly start questioning...</description>
+        <pubDate>Sat, 19 Sep 2020 00:00:00 +0530</pubDate>
+        <link>http://ankurabhinav.com/tech/2020/09/19/test-driven-development.html</link>
+        <guid isPermaLink="true">http://ankurabhinav.com/tech/2020/09/19/test-driven-development.html</guid>
+        
+        <category>tests</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>Why you definitely need to learn investing</title>
+        <description>&lt;p&gt;A person learns different skills during his/her lifetime to make his/her life continuously better. Every person tries to learn skills which are relevant in his or her profession. A software...</description>
+        <pubDate>Sat, 22 Aug 2020 00:00:00 +0530</pubDate>
+        <link>http://ankurabhinav.com/finance/2020/08/22/why-you-definitely-need-to-learn-investing.html</link>
+        <guid isPermaLink="true">http://ankurabhinav.com/finance/2020/08/22/why-you-definitely-need-to-learn-investing.html</guid>
+        
+        <category>investing</category>
+        
+        <category>basics</category>
+        
+        
+        <category>finance</category>
+        
+      </item>
+    
+      <item>
+        <title>The Purpose of Commenting</title>
+        <description>&lt;p&gt;One of the most crucial and also the most ignored part of every code is &lt;code class=&quot;highlighter-rouge&quot;&gt;Commenting&lt;/code&gt;. The coder while writing a code is usually too much involed into the...</description>
+        <pubDate>Mon, 10 Aug 2020 00:00:00 +0530</pubDate>
+        <link>http://ankurabhinav.com/tech/2020/08/10/the-purpose-of-commenting.html</link>
+        <guid isPermaLink="true">http://ankurabhinav.com/tech/2020/08/10/the-purpose-of-commenting.html</guid>
+        
+        <category>coding</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+  </channel>
+</rss>

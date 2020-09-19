@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Test Driven Development</title>
+  <meta name="description" content="Have you ever felt frustrated and exhausted while writing your code? Does it happen to you that you spend a lot of time debugging your code and suddenly star...">
+  
+  <meta name="author" content="Ankur Abhinav">
+  <meta name="copyright" content="&copy; Ankur Abhinav 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Have you ever felt frustrated and exhausted while writing your code? Does it happen to you that you spend a lot of time debugging your code and suddenly star..." />
+  <meta property="og:url" content="http://ankurabhinav.com/tech/2020/09/19/test-driven-development.html">
+  <meta property="og:site_name" content="ANKUR ABHINAV" />
+  <meta property="og:title" content="Test Driven Development" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://ankurabhinav.com/assets/instacode.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Test Driven Development">
+  <meta name="twitter:description" content="Have you ever felt frustrated and exhausted while writing your code? Does it happen to you that you spend a lot of time debugging your code and suddenly star...">
+  <meta name="twitter:image" content="http://ankurabhinav.com/assets/instacode.png">
+  <meta name="twitter:url" content="http://ankurabhinav.com/tech/2020/09/19/test-driven-development.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://ankurabhinav.com/tech/2020/09/19/test-driven-development.html">
+	<link rel="alternate" type="application/rss+xml" title="ANKUR ABHINAV" href="http://ankurabhinav.com/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/ankur_logo6.png" alt="ANKUR ABHINAV">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">
+	<strong>About Me</strong>
+    </a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">
+	<strong>Posts</strong>
+    </a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/instacode.png);">
+  <div class="scrim has-cover">
+    <header class="post-header">
+      <h1 class="title">Test Driven Development</h1>
+      <p class="info">by <strong>Ankur Abhinav</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+  <div class="post-date">September 19, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/tech">Tech</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>Have you ever felt frustrated and exhausted while writing your code? Does it happen to you that you spend a lot of time debugging your code and suddenly start questioning your job? Debugging your code can be very stressful especially when your codebase is big. Also, it can affect your timeline as you may spend a lot of time finding that small and hidden error.</p>
+
+<p>Test Driven Development can help you from these difficult times. In this blog, I have given an overview about Test Driven Development and how you can use it. If you are a pro coder and always manage to write the correct and working piece of code in one shot, you don’t need to read this blog.</p>
+
+<h2 id="what-is-tdd">What is TDD</h2>
+
+<p>Test Driven Development, often called as TDD, is a cycle based technique of software engineering. In each cycle, the developer adds some new tests to the code and focuses on improving the codebase so that the new test cases pass. The aim of development is to get all the tests green rather than getting a desired output from the code.<br />
+Each cycle can be said to have 5 different steps:</p>
+<ol>
+  <li>The developer adds new tests </li>
+  <li>The new tests fail while running</li>
+  <li>Change your codebase with an aim to pass the new tests</li>
+  <li>Run all the tests to see them pass</li>
+  <li>Refactor your code to remove any duplication</li>
+</ol>
+
+<p>These steps are not all compulsory. Overall, the idea of TDD is to boost the confidence of the developer and to remove the stress. <br />
+When the developer sees all the tests passing, he/she has an instant feeling of relaxation. The developer can then move on to the next cycle safely. There is no hard rule on how much change you should make in each cycle. Ideally you should add one extra test but it depends on your comfort. If you are feeling very confident about taking big steps and not breaking your code, go for it. If you are doubtful anytime or things are going out of your mind, immediately stop and run the tests. If any test is failing, fix it otherwise move forward. <br />
+Some developers also feel comfortable on first making some obvious change in the code and then writing the test to check whether their thought is in line with the machine.</p>
+
+<h2 id="benefits-of-tdd">Benefits of TDD</h2>
+
+<p>On first glance, TDD looks boring and time-consuming as you need to write the tests too (seems like you need to write double the amount of code). But TDD has a lot of benefits.</p>
+
+<p>TDD saves time in long run. Many times you would spend a lot of time debugging your code (more time than you spent on writing the code itself). TDD can save you from these long and stressful time.</p>
+
+<p>Personally, I have felt that TDD is very useful when you are working on a software having a large codebase which has not been written by you. Suppose your codebase doesn’t have any tests. Now, if you make some small change in the code, you need to run the whole code to check whether everything is fine. The running of code may also take a lot time, and if you need to run it again and again it can be frustrating. Unfortunately, if something breaks, maybe you changed a function and some other part of the code dependent on this function goes wrong, you will have to spend some considerable time to locate the error and fix it.</p>
+
+<p>On the other hand, if your codebase has proper tests written, you just have to run all the tests and check whether they are passing. You don’t need to run your entire codebase. It it’s green, be happy and move forward and if you get something red, you immediately know where the error is and fix it. Running tests require less time than running your entire code because the computationally expensive parts are often mocked while writting the tests. Ideally, the runtime of all the tests should be within seconds so that you don’t have to wait for too long to get the results of your tests. Also, to get these benefits, all your team members should follow TDD and write proper tests.</p>
+
+<p>When I make any small change in the codebase, I run the tests. When I get them green, I am assured that everything is fine. I don’t have to worry about any of the parts getting broken. I don’t have to run the code again to check whether it’s working or not. And I can push my change with relief.</p>
+
+<p>Overall, TDD will provide you confidence while working and help your mind to be stress-free.</p>
+
+<h2 id="example">Example</h2>
+
+<p>I will illustrate the TDD procedure using a very simple and small example. <br />
+Suppose we have to write a function to calculate the BMI of a person when the input is height and weight. We know that BMI = (weight)/ (height)^2. We won’t care about the units of height and weight here.</p>
+
+<p><b>Step 1:</b> We start by writing simple test.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test_calc_bmi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+	<span class="k">pass</span></code></pre></figure>
+
+<p>We run the tests and everything is green. That’s a good thing!</p>
+
+<p><b>Step 2:</b> We improve our tests.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">},</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">test_calc_bmi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"weight"</span><span class="p">]</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"height"</span><span class="p">]</span>
+
+        <span class="n">actual_bmi</span> <span class="o">=</span> <span class="n">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">h</span><span class="p">)</span>
+        <span class="n">expected_bmi</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"bmi"</span><span class="p">]</span>
+
+        <span class="k">assert</span> <span class="n">actual_bmi</span> <span class="o">==</span> <span class="n">expected_bmi</span></code></pre></figure>
+
+<p>When we run the test, it fails because there is no <code class="highlighter-rouge">calc_bmi</code> function. Hence, we realize that we need to implement the function to make our tests pass.</p>
+
+<p><b>Step 3:</b> We add code to make the failing tests pass.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">bmi</span> <span class="kn">import</span> <span class="n">calc_bmi</span>
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">},</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">test_calc_bmi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"weight"</span><span class="p">]</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"height"</span><span class="p">]</span>
+
+        <span class="n">actual_bmi</span> <span class="o">=</span> <span class="n">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">h</span><span class="p">)</span>
+        <span class="n">expected_bmi</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"bmi"</span><span class="p">]</span>
+
+        <span class="k">assert</span> <span class="n">actual_bmi</span> <span class="o">==</span> <span class="n">expected_bmi</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mf">20.0</span></code></pre></figure>
+
+<p>Now the tests are passing again and we are happy.<br />
+You may be wondering that this is a very silly implementation and we definitely need to change it. You are right that we will change it in the next step. But at this time, all our tests are green and we are good to go. Remember, in TDD our aim is to keep all the tests green. Also, this technique is called <code class="highlighter-rouge">Fake it till you make it</code>.</p>
+
+<p><b>Step 4:</b> We add more test cases for cross-checking.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">bmi</span> <span class="kn">import</span> <span class="n">calc_bmi</span>
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">50.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">22.22</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">31.25</span><span class="p">},</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">test_calc_bmi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"weight"</span><span class="p">]</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"height"</span><span class="p">]</span>
+
+        <span class="n">actual_bmi</span> <span class="o">=</span> <span class="n">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">h</span><span class="p">)</span>
+        <span class="n">expected_bmi</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"bmi"</span><span class="p">]</span>
+
+        <span class="k">assert</span> <span class="n">actual_bmi</span> <span class="o">==</span> <span class="n">expected_bmi</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mf">20.0</span></code></pre></figure>
+
+<p>Now, the tests fail again.</p>
+
+<p><b>Step 5:</b> We refactor our code to make the tests pass.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">bmi</span> <span class="kn">import</span> <span class="n">calc_bmi</span>
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">50.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">22.22</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">31.25</span><span class="p">},</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">test_calc_bmi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"weight"</span><span class="p">]</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"height"</span><span class="p">]</span>
+
+        <span class="n">actual_bmi</span> <span class="o">=</span> <span class="n">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">h</span><span class="p">)</span>
+        <span class="n">expected_bmi</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"bmi"</span><span class="p">]</span>
+
+        <span class="k">assert</span> <span class="n">actual_bmi</span> <span class="o">==</span> <span class="n">expected_bmi</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">bmi</span> <span class="o">=</span> <span class="n">weight</span> <span class="o">/</span> <span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">bmi</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></code></pre></figure>
+
+<p>Now the tests are passing again. And everything seems fine. However, there is one issue that we need to handle. The function <code class="highlighter-rouge">calc_bmi</code> cannot take negative values as input. In that case, we should raise an error.</p>
+
+<p><b>Step 6:</b> I have added the tests and refactored the code in a single step to avoid too many steps and to keep this blog shorter.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">bmi</span> <span class="kn">import</span> <span class="n">calc_bmi</span>
+
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">50.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">22.22</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="mf">31.25</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="o">-</span><span class="mf">10.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="s">"error"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"weight"</span><span class="p">:</span> <span class="mf">50.0</span><span class="p">,</span> <span class="s">"height"</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="s">"bmi"</span><span class="p">:</span> <span class="s">"error"</span><span class="p">},</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">test_calc_bmi</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"weight"</span><span class="p">]</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"height"</span><span class="p">]</span>
+
+        <span class="n">expected_bmi</span> <span class="o">=</span> <span class="n">test_case</span><span class="p">[</span><span class="s">"bmi"</span><span class="p">]</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">actual_bmi</span> <span class="o">=</span> <span class="n">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">h</span><span class="p">)</span>
+        <span class="k">except</span> <span class="nb">ValueError</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">expected_bmi</span> <span class="o">==</span> <span class="s">"error"</span>
+            <span class="k">return</span>
+
+        <span class="k">assert</span> <span class="n">actual_bmi</span> <span class="o">==</span> <span class="n">expected_bmi</span>
+        <span class="k">return</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">calc_bmi</span><span class="p">(</span><span class="n">weight</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">weight</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">height</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Invalid Input Type: negative inputs not allowed"</span><span class="p">)</span>
+
+    <span class="n">bmi</span> <span class="o">=</span> <span class="n">weight</span> <span class="o">/</span> <span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">bmi</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></code></pre></figure>
+
+<p>Finally, the code is complete and we are confident about its working, at least at this point of time. <br />
+In future, if someone else works on this code and needs to improve it, he will start by running the tests and seeing all the tests green will give him some confidence. He can then add more tests and refactor the code to make them pass.</p>
+
+<p>I hope that this article was helpful for you and you will use TDD while development. If you have any kind of doubt regarding TDD, feel free to ask me about it in the comments. <br />
+Thank you!</p>
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/tests">tests</a>
+</section>
+
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong><!--Subscribe--> <a href="/feed.xml"><!--via RSS--></a></strong></p>
+</section>
+
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=Test+Driven+Development&url=http%3A%2F%2Fankurabhinav.com%2Ftech%2F2020%2F09%2F19%2Ftest-driven-development.html&via=ankurabhinav100"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Test+Driven+Development&u=http%3A%2F%2Fankurabhinav.com%2Ftech%2F2020%2F09%2F19%2Ftest-driven-development.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fankurabhinav.com%2Ftech%2F2020%2F09%2F19%2Ftest-driven-development.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+        <i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('http://ankurabhinav.com/tech/2020/09/19/test-driven-development.html') + '&title=Test Driven Development'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'asquare100-github-io';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">ANKUR ABHINAV</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">
+	<strong>About Me</strong>
+    </a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">
+	<strong>Posts</strong>
+    </a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:abhinav.ankur100@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">abhinav.ankur100@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://twitter.com/ankurabhinav100" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">ankurabhinav100</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/asquare100" title="Find me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">asquare100</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://www.linkedin.com/in/ankur-abhinav-15b4b6131/" title="Connect with me on LinkedIn">
+              <i class="fa fa-linkedin"></i>
+              <span class="username">Ankur Abhinav</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <!-- <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p> -->
+      <p><strong>Description</strong></p>
+      <p class="text">I am Ankur Abhinav.  The blogs on this website express my personal opinions on different topics.
+</p>
+    </div>
+  
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<!--
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	/*if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}*/
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

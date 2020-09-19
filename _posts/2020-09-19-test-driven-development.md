@@ -10,7 +10,7 @@ cover:  "/assets/instacode.png"
 
 Have you ever felt frustrated and exhausted while writing your code? Does it happen to you that you spend a lot of time debugging your code and suddenly start questioning your job? Debugging your code can be very stressful especially when your codebase is big. Also, it can affect your timeline as you may spend a lot of time finding that small and hidden error.   
 
-Test Driven Development can help you from these difficult times. In this blog, I have given an overview about Test Driven Development and how you can use it. If you are a pro coder and always manage to write a correct and working code in one shot, you don't need to read this blog.
+Test Driven Development can help you from these difficult times. In this blog, I have given an overview about Test Driven Development and how you can use it. If you are a pro coder and always manage to write the correct and working piece of code in one shot, you don't need to read this blog.
 
 ## What is TDD
 
